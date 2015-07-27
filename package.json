@@ -1,0 +1,19 @@
+{
+  "name": "node-seed",
+  "version": "0.0.0",
+  "description": "A skeleton for a typical NodeJS application",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hwndept/node-seed.git"
+  },
+  "author": "Nikolay Shatalov <hwndept@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hwndept/node-seed/issues"
+  },
+  "homepage": "https://github.com/hwndept/node-seed"
+}
