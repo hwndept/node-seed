@@ -44,4 +44,6 @@ gulp.task('test', function () {
 
 gulp.task('build', ['jshint', 'jscs', 'test']);
 
+gulp.task('pre-commit', ['build']);
+
 gulp.task('default', ['build']);
