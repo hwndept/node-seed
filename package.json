@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hwndept/node-seed/issues"
   },
-  "homepage": "https://github.com/hwndept/node-seed"
+  "homepage": "https://github.com/hwndept/node-seed",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
 }
