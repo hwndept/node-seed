@@ -42,4 +42,6 @@ gulp.task('test', function () {
     });
 });
 
-gulp.task('default', ['jshint', 'jscs', 'test']);
+gulp.task('build', ['jshint', 'jscs', 'test']);
+
+gulp.task('default', ['build']);
