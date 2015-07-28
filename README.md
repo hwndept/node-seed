@@ -5,6 +5,8 @@ This project is a skeleton for a typical NodeJS application.
 The idea is to group useful tools and good practices for every application is being developed in node.
 
 [![build][travis-image]][travis-url]
+[![codeclimate][codeclimate-image]][codeclimate-url]
+[![test coverage][codeclimate-coverage-image]][codeclimate-coverage-url]
 
 ## What are included
 
@@ -62,3 +64,7 @@ The task **gulp build** will be run automatically.
 
 [travis-image]: https://travis-ci.org/hwndept/node-seed.svg?branch=master
 [travis-url]: https://travis-ci.org/hwndept/node-seed
+[codeclimate-image]: https://codeclimate.com/github/hwndept/node-seed/badges/gpa.svg
+[codeclimate-url]: https://codeclimate.com/github/hwndept/node-seed
+[codeclimate-coverage-image]: https://codeclimate.com/github/hwndept/node-seed/badges/coverage.svg
+[codeclimate-coverage-url]: https://codeclimate.com/github/hwndept/node-seed/coverage
