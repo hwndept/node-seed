@@ -4,6 +4,6 @@ addons:
   code_climate:
     repo_token: fa9b150c0417ac2278e72db2e8e8641e6cecc138590ed579c6ad9a65315d9bc6
 install:  npm install
-script:   npm test
+script:   ./node_modules/.bin/gulp ci
 after_script:
   - codeclimate-test-reporter < ./build/coverage/lcov.info
