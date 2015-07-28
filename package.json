@@ -2,6 +2,16 @@
   "name": "node-seed",
   "version": "0.0.1",
   "description": "A skeleton for a typical NodeJS application",
+  "keywords": [
+    "node seed",
+    "jshint",
+    "jscs",
+    "mocha",
+    "istanbul",
+    "code coverage",
+    "gulp",
+    "pre-commit"
+  ],
   "main": "",
   "scripts": {
     "test": "./node_modules/.bin/gulp pre-commit"
