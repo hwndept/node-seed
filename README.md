@@ -4,6 +4,8 @@ This project is a skeleton for a typical NodeJS application.
 
 The idea is to group useful tools and good practices for every application is being developed in node.
 
+[![build][travis-image]][travis-url]
+
 ## What are included
 
 - Code linter - [jshint](http://jshint.com/);
@@ -57,3 +59,6 @@ The task **gulp build** will be run automatically.
   .jshintrc               --> configuration file for jshint
   gulpfile.js             --> list of all gulp tasks
 ```
+
+[travis-image]: https://travis-ci.org/hwndept/node-seed.svg?branch=master
+[travis-url]: https://travis-ci.org/hwndept/node-seed
