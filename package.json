@@ -14,8 +14,11 @@
   ],
   "main": "",
   "scripts": {
-    "test": "./node_modules/.bin/gulp pre-commit"
+    "pre-commit": "./node_modules/.bin/gulp pre-commit"
   },
+  "pre-commit": [
+    "pre-commit"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/hwndept/node-seed.git"
