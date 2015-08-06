@@ -16,6 +16,7 @@ The idea is to group useful tools and good practices for every application is be
 - Test coverage checker - [istanbul](https://github.com/gotwarlost/istanbul);
 - Task manager - [gulp](http://gulpjs.com/);
 - Pre-commit hook;
+- JsDoc generation;
 - Codeclimate integration;
 - TravisCI integation;
 
@@ -38,6 +39,14 @@ gulp test
 ```
 
 Coverage reports will be generated and stored in folder **build/coverage**
+
+## Generating jsdoc
+
+```bash
+gulp jsdoc
+```
+
+Documentation will be generated and stored in folder **build/jsdoc**
 
 ## Running all tasks
 
