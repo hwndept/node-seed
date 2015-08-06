@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
@@ -16,7 +18,7 @@ gulp.task('jshint', function () {
   return gulp.src(GULP_FILE.concat(SRC_FILES, TEST_FILES))
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
-    .pipe(jshint.reporter("fail"));
+    .pipe(jshint.reporter('fail'));
 });
 
 gulp.task('jscs', function () {
