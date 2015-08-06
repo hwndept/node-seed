@@ -20,7 +20,7 @@ var util = require('util');
  *  hello('username'); // 'Hello, username'
  */
 module.exports = function hello(name) {
-    name = name || 'world';
+  name = name || 'world';
 
-    return util.format('Hello, %s!', name);
+  return util.format('Hello, %s!', name);
 };
