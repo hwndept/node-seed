@@ -7,6 +7,10 @@ The idea is to group useful tools and good practices for every application is be
 [![build][travis-image]][travis-url]
 [![codeclimate][codeclimate-image]][codeclimate-url]
 [![test coverage][codeclimate-coverage-image]][codeclimate-coverage-url]
+[![npm version][npm-version]][npm-version-url]
+[![npm dependencies][npm-dependencies]][npm-dependencies-url]
+[![npm dev dependencies][npm-dev-dependencies]][npm-dev-dependencies-url]
+
 
 ## What are included
 
@@ -102,3 +106,9 @@ The task **gulp build** will be run automatically.
 [codeclimate-url]: https://codeclimate.com/github/hwndept/node-seed
 [codeclimate-coverage-image]: https://codeclimate.com/github/hwndept/node-seed/badges/coverage.svg
 [codeclimate-coverage-url]: https://codeclimate.com/github/hwndept/node-seed/coverage
+[npm-version]: https://img.shields.io/npm/v/node-seed.svg
+[npm-version-url]: https://www.npmjs.com/package/node-seed
+[npm-dependencies]: https://david-dm.org/hwndept/node-seed/status.svg
+[npm-dependencies-url]: https://david-dm.org/hwndept/node-seed
+[npm-dev-dependencies]: https://david-dm.org/hwndept/node-seed/dev-status.svg
+[npm-dev-dependencies-url]: https://david-dm.org/hwndept/node-seed#info=devDependencies&view=table
