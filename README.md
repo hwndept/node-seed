@@ -16,6 +16,8 @@ The idea is to group useful tools and good practices for every application is be
 - Test coverage checker - [istanbul](https://github.com/gotwarlost/istanbul);
 - Task manager - [gulp](http://gulpjs.com/);
 - Pre-commit hook;
+- Codeclimate integration;
+- TravisCI integation;
 
 ## Linting
 
