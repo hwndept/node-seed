@@ -26,17 +26,31 @@ The idea is to group useful tools and good practices for every application is be
 gulp jshint
 ```
 
+Code that will be validated:
+
+- all **\*.js** files in **src** folder
+- all **\*.js** files in **test** folder
+- **gulpfile.js**
+
 ## Checking code style
 
 ```bash
 gulp jscs
 ```
 
+Code that will be validated:
+
+- all **\*.js** files in **src** folder
+- all **\*.js** files in **test** folder
+- **gulpfile.js**
+
 ## Running tests and generating code coverage report
 
 ```bash
 gulp test
 ```
+
+Test cases stored in files **test/\*\*/\*.test.js** will be run only
 
 Coverage reports will be generated and stored in folder **build/coverage**
 
@@ -46,7 +60,7 @@ Coverage reports will be generated and stored in folder **build/coverage**
 gulp jsdoc
 ```
 
-Documentation will be generated and stored in folder **build/jsdoc**
+Documentation will be generated for **\*.js** files from **src** folder and stored in folder **build/jsdoc**
 
 ## Running all tasks
 
@@ -65,11 +79,20 @@ The task **gulp build** will be run automatically.
 ## Directory Layout
 
 ```
-  build/                  --> build results: coverage report
+  build/                  --> build results
+    coverage              --> code coverage reports
+    jsdoc                 --> documentation generated for source code
   src/                    --> source files for the application
+    hello.js              --> added just for an example
   test/                   --> test files for the application
+    .jshintrc             --> configuration file for jshint; these rules will 
+                              be applied for files in this folder only;
+                              created because test cases contain global functions
+                              which exports by mocha(describe, it,beforeEach, etc)
+    hello.test.js         --> added just for an example
   .jscsrc                 --> configuration file for jscs
   .jshintrc               --> configuration file for jshint
+  .travis.yml             --> configuration file for travis-ci
   gulpfile.js             --> list of all gulp tasks
 ```
 
