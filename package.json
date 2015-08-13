@@ -3,6 +3,8 @@
   "version": "0.0.12",
   "description": "A skeleton for a typical NodeJS application",
   "keywords": [
+    "node project",
+    "nodejs project",
     "node seed",
     "jshint",
     "jscs",
@@ -10,7 +12,9 @@
     "istanbul",
     "code coverage",
     "gulp",
-    "pre-commit"
+    "pre-commit",
+    "es6",
+    "babel"
   ],
   "main": "",
   "scripts": {
