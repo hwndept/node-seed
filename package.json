@@ -1,6 +1,6 @@
 {
   "name": "node-seed",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "A skeleton for a typical NodeJS application",
   "keywords": [
     "node seed",
