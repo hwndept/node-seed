@@ -4,25 +4,26 @@ This project is a skeleton for a typical NodeJS application.
 
 The idea is to group useful tools and good practices for every application is being developed in node.
 
-[![build][travis-image]][travis-url]
-[![codeclimate][codeclimate-image]][codeclimate-url]
-[![test coverage][codeclimate-coverage-image]][codeclimate-coverage-url]
-[![npm version][npm-version]][npm-version-url]
-[![npm dependencies][npm-dependencies]][npm-dependencies-url]
-[![npm dev dependencies][npm-dev-dependencies]][npm-dev-dependencies-url]
+[![build][project-travis-ci-image]][project-travis-ci-url]
+[![codeclimate][project-codeclimate-image]][project-codeclimate-url]
+[![test coverage][project-codeclimate-coverage-image]][project-codeclimate-coverage-url]
+[![npm version][project-npm-version]][project-npm-version-url]
+[![npm dependencies][project-npm-dependencies]][project-npm-dependencies-url]
+[![npm dev dependencies][project-npm-dev-dependencies]][project-npm-dev-dependencies-url]
 
 
 ## What are included
 
-- Code linter - [jshint](http://jshint.com/);
-- Code style checker - [jscs](http://jscs.info/);
-- Test runner - [mocha](http://mochajs.org/);
-- Test coverage checker - [istanbul](https://github.com/gotwarlost/istanbul);
-- Task manager - [gulp](http://gulpjs.com/);
+- Code linter - [jshint][jshint-url]
+- Code style checker - [jscs][jscs-url]
+- Test runner - [mocha][mocha-url];
+- Test coverage checker - [istanbul][istanbul-url];
+- Task manager - [gulp][gulp-url];
 - Pre-commit hook;
-- JsDoc generation;
-- Codeclimate integration;
-- TravisCI integation;
+- JsDoc generation - [jsdoc][jsdoc-url];
+- ES6 Support([ECMA-262, Edition 5][ecma-262-edition-5-url]) - [babel][babel-url];
+- Codeclimate integration [codeclimate][codeclimate-url];
+- TravisCI integation [travis-ci][travis-ci-url];
 
 ## Linting
 
@@ -66,6 +67,16 @@ gulp jsdoc
 
 Documentation will be generated for **\*.js** files from **src** folder and stored in folder **build/jsdoc**
 
+## Compiling code - ES6 Support
+
+Since **nodejs** doesn't fully support all ES6 features source code should be compiled.
+
+```bash
+gulp compile
+```
+
+Source code in **src** folder will be compiled and stored in folder **build/source**
+
 ## Running all tasks
 
 ```bash
@@ -100,15 +111,25 @@ The task **gulp build** will be run automatically.
   gulpfile.js             --> list of all gulp tasks
 ```
 
-[travis-image]: https://travis-ci.org/hwndept/node-seed.svg?branch=master
-[travis-url]: https://travis-ci.org/hwndept/node-seed
-[codeclimate-image]: https://codeclimate.com/github/hwndept/node-seed/badges/gpa.svg
-[codeclimate-url]: https://codeclimate.com/github/hwndept/node-seed
-[codeclimate-coverage-image]: https://codeclimate.com/github/hwndept/node-seed/badges/coverage.svg
-[codeclimate-coverage-url]: https://codeclimate.com/github/hwndept/node-seed/coverage
-[npm-version]: https://img.shields.io/npm/v/node-seed.svg
-[npm-version-url]: https://www.npmjs.com/package/node-seed
-[npm-dependencies]: https://david-dm.org/hwndept/node-seed/status.svg
-[npm-dependencies-url]: https://david-dm.org/hwndept/node-seed
-[npm-dev-dependencies]: https://david-dm.org/hwndept/node-seed/dev-status.svg
-[npm-dev-dependencies-url]: https://david-dm.org/hwndept/node-seed#info=devDependencies&view=table
+[project-travis-image]: https://travis-ci.org/hwndept/node-seed.svg?branch=master
+[project-travis-url]: https://travis-ci.org/hwndept/node-seed
+[project-codeclimate-image]: https://codeclimate.com/github/hwndept/node-seed/badges/gpa.svg
+[project-codeclimate-url]: https://codeclimate.com/github/hwndept/node-seed
+[project-codeclimate-coverage-image]: https://codeclimate.com/github/hwndept/node-seed/badges/coverage.svg
+[project-codeclimate-coverage-url]: https://codeclimate.com/github/hwndept/node-seed/coverage
+[project-npm-version]: https://img.shields.io/npm/v/node-seed.svg
+[project-npm-version-url]: https://www.npmjs.com/package/node-seed
+[project-npm-dependencies]: https://david-dm.org/hwndept/node-seed/status.svg
+[project-npm-dependencies-url]: https://david-dm.org/hwndept/node-seed
+[project-npm-dev-dependencies]: https://david-dm.org/hwndept/node-seed/dev-status.svg
+[project-npm-dev-dependencies-url]: https://david-dm.org/hwndept/node-seed#info=devDependencies&view=table
+[jshint-url]: http://jshint.com/
+[jscs-url]: http://jscs.info/
+[mocha-url]: http://mochajs.org/
+[istanbul-url]: https://github.com/gotwarlost/istanbul/
+[gulp-url]: http://gulpjs.com/
+[jsdoc-url]: http://usejsdoc.org/
+[ecma-262-edition-5-url]: http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-262.pdf
+[babel-url]: https://babeljs.io/
+[codeclimate-url]: https://codeclimate.com/
+[travis-ci-url]: https://travis-ci.org/

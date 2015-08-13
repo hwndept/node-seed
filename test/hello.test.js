@@ -1,14 +1,14 @@
 'use strict';
 
-var assert = require('assert');
-var hello = require('../src/hello');
+import assert from 'assert';
+import hello from '../src/hello';
 
-describe('hello.js', function () {
-  it('it should return "Hello, world!" when name is empty', function () {
+describe('hello.js', () => {
+  it('it should return "Hello, world!" when name is empty', () => {
     assert.equal('Hello, world!', hello());
   });
 
-  it('it should pass the name when it is passed', function () {
+  it('it should pass the name when it is passed', () => {
     assert.equal('Hello, username!', hello('username'));
   });
 });
