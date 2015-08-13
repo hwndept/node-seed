@@ -111,8 +111,8 @@ The task **gulp build** will be run automatically.
   gulpfile.js             --> list of all gulp tasks
 ```
 
-[project-travis-image]: https://travis-ci.org/hwndept/node-seed.svg?branch=master
-[project-travis-url]: https://travis-ci.org/hwndept/node-seed
+[project-travis-ci-image]: https://travis-ci.org/hwndept/node-seed.svg?branch=master
+[project-travis-ci-url]: https://travis-ci.org/hwndept/node-seed
 [project-codeclimate-image]: https://codeclimate.com/github/hwndept/node-seed/badges/gpa.svg
 [project-codeclimate-url]: https://codeclimate.com/github/hwndept/node-seed
 [project-codeclimate-coverage-image]: https://codeclimate.com/github/hwndept/node-seed/badges/coverage.svg
