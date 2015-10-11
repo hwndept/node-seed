@@ -1,9 +1,3 @@
-# node-seed
-
-This project is a skeleton for a typical NodeJS application.
-
-The idea is to group useful tools and good practices for every application is being developed in node.
-
 [![build][project-travis-ci-image]][project-travis-ci-url]
 [![codeclimate][project-codeclimate-image]][project-codeclimate-url]
 [![test coverage][project-codeclimate-coverage-image]][project-codeclimate-coverage-url]
@@ -11,6 +5,30 @@ The idea is to group useful tools and good practices for every application is be
 [![npm dependencies][project-npm-dependencies]][project-npm-dependencies-url]
 [![npm dev dependencies][project-npm-dev-dependencies]][project-npm-dev-dependencies-url]
 
+# node-seed
+
+This project is a skeleton for a typical NodeJS application.
+
+The idea is to group useful tools and good practices for every application is being developed in node.
+
+## How to use
+
+1. Clone this repository: `git clone https://github.com/hwndept/node-seed`
+2. Remove .git directory
+3. Update package.json
+  - set "name"
+  - set "version"(0.0.0 by default)
+  - set "description"
+  - set "author"
+  - set "license"
+  - set right "keywords" or remove this section
+  - set your "repository" or remove this section
+  - set "buggs" or remove this section
+  - set "homepage" or remove this section
+4. Update README.md
+5. Update .travis.yml to use Travis as CI or remove it.
+  **repo_token** used in config is the codeclimate's token.
+  Every build on travis will report code coverage value to codeclimate.
 
 ## What are included
 
