@@ -5,7 +5,7 @@ var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
 var mocha = require('gulp-mocha');
 var istanbul = require('gulp-istanbul');
-var jsdoc = require('gulp-jsdoc');
+var jsdoc = require('gulp-jsdoc3');
 var sequence = require('run-sequence');
 var babel = require('gulp-babel');
 var isparta = require('isparta');
@@ -17,7 +17,6 @@ var TEST_FILES = ['test/**/*.js'];
 var TEST_CASE_FILES = ['test/**/*.test.js'];
 var COVERAGE_REPORT_DIR = 'build/coverage';
 var COMPILED_SRC_DIR = 'build/source';
-var COMPILED_SRC_FILES = [COMPILED_SRC_DIR + '/**/*.js'];
 var JSDOC_DIR = 'build/jsdoc';
 
 gulp.task('jshint', function (done) {
@@ -64,9 +63,13 @@ gulp.task('compile', function (done) {
 });
 
 gulp.task('jsdoc', ['compile'], function (done) {
-  gulp.src(COMPILED_SRC_FILES)
-    .pipe(jsdoc(JSDOC_DIR))
-    .on('finish', done);
+  gulp.src(SRC_FILES, {read: false})
+    .pipe(jsdoc({
+      opts: {destination: JSDOC_DIR},
+      templates: {
+        theme: 'cerulean'
+      }
+    }, done));
 });
 
 gulp.task('build', function (done) {

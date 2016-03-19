@@ -39,7 +39,7 @@
     "gulp-babel": "^5.2.0",
     "gulp-istanbul": "^0.10.0",
     "gulp-jscs": "^2.0.0",
-    "gulp-jsdoc": "^0.1.4",
+    "gulp-jsdoc3": "^0.2.1",
     "gulp-jshint": "^1.11.2",
     "gulp-mocha": "^2.1.3",
     "isparta": "^3.0.3",
