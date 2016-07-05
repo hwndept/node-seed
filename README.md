@@ -42,6 +42,7 @@ The idea is to group useful tools and good practices for every application is be
 - ES6 Support([ECMA-262, Edition 5][ecma-262-edition-5-url]) - [babel][babel-url];
 - Codeclimate integration [codeclimate][codeclimate-url];
 - TravisCI integation [travis-ci][travis-ci-url];
+- Editor Config [editorconfig][editor-config-url];
 
 ## Linting
 
@@ -118,11 +119,12 @@ The task **gulp build** will be run automatically.
   src/                    --> source files for the application
     hello.js              --> added just for an example
   test/                   --> test files for the application
-    .jshintrc             --> configuration file for jshint; these rules will 
+    .jshintrc             --> configuration file for jshint; these rules will
                               be applied for files in this folder only;
                               created because test cases contain global functions
                               which exports by mocha(describe, it,beforeEach, etc)
     hello.test.js         --> added just for an example
+  .editorconfig           --> configuration file for code editors to keep style
   .jscsrc                 --> configuration file for jscs
   .jshintrc               --> configuration file for jshint
   .travis.yml             --> configuration file for travis-ci
@@ -151,3 +153,4 @@ The task **gulp build** will be run automatically.
 [babel-url]: https://babeljs.io/
 [codeclimate-url]: https://codeclimate.com/
 [travis-ci-url]: https://travis-ci.org/
+[editor-config-url]: http://editorconfig.org/
