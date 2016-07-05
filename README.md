@@ -124,10 +124,10 @@ The task **gulp build** will be run automatically.
                               created because test cases contain global functions
                               which exports by mocha(describe, it,beforeEach, etc)
     hello.test.js         --> added just for an example
+  .editorconfig           --> configuration file for code editors to keep style
   .jscsrc                 --> configuration file for jscs
   .jshintrc               --> configuration file for jshint
   .travis.yml             --> configuration file for travis-ci
-  .editorconfig           --> configuration file for code editors to keep style
   gulpfile.js             --> list of all gulp tasks
 ```
 
