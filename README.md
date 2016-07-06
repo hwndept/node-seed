@@ -23,7 +23,7 @@ The idea is to group useful tools and good practices for every application is be
   - set "license"
   - set right "keywords" or remove this section
   - set your "repository" or remove this section
-  - set "buggs" or remove this section
+  - set "bugs" or remove this section
   - set "homepage" or remove this section
 4. Update README.md
 5. Update .travis.yml to use Travis as CI or remove it.
@@ -41,8 +41,9 @@ The idea is to group useful tools and good practices for every application is be
 - JsDoc generation - [jsdoc][jsdoc-url];
 - ES6 Support([ECMA-262, Edition 5][ecma-262-edition-5-url]) - [babel][babel-url];
 - Codeclimate integration [codeclimate][codeclimate-url];
-- TravisCI integation [travis-ci][travis-ci-url];
+- TravisCI integration [travis-ci][travis-ci-url];
 - Editor Config [editorconfig][editor-config-url];
+- List all available tasks using `gulp help` command;
 
 ## Linting
 
@@ -109,6 +110,12 @@ gulp build
 This hook is invoked by **git commit**, and can be bypassed with **--no-verify** option.
 
 The task **gulp build** will be run automatically.
+
+## Printing all available tasks and theirs arguments
+
+```bash
+gulp help
+```
 
 ## Directory Layout
 
