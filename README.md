@@ -32,8 +32,7 @@ The idea is to group useful tools and good practices for every application is be
 
 ## What are included
 
-- Code linter - [jshint][jshint-url]
-- Code style checker - [jscs][jscs-url]
+- Code linter - [eslint][eslint-url];
 - Test runner - [mocha][mocha-url];
 - Test coverage checker - [istanbul][istanbul-url];
 - Task manager - [gulp][gulp-url];
@@ -48,19 +47,7 @@ The idea is to group useful tools and good practices for every application is be
 ## Linting
 
 ```bash
-gulp jshint
-```
-
-Code that will be validated:
-
-- all **\*.js** files in **src** folder
-- all **\*.js** files in **test** folder
-- **gulpfile.js**
-
-## Checking code style
-
-```bash
-gulp jscs
+gulp lint
 ```
 
 Code that will be validated:
@@ -126,14 +113,14 @@ gulp help
   src/                    --> source files for the application
     hello.js              --> added just for an example
   test/                   --> test files for the application
-    .jshintrc             --> configuration file for jshint; these rules will
-                              be applied for files in this folder only;
-                              created because test cases contain global functions
-                              which exports by mocha(describe, it,beforeEach, etc)
+    .eslintrc             --> configuration file for eslint; these rules
+                              will be applied for files in this folder
+                              only; created because test cases contain
+                              global functions which exports by
+                              mocha(describe, it, beforeEach, etc)
     hello.test.js         --> added just for an example
   .editorconfig           --> configuration file for code editors to keep style
-  .jscsrc                 --> configuration file for jscs
-  .jshintrc               --> configuration file for jshint
+  .eslintrc               --> configuration file for eslint
   .travis.yml             --> configuration file for travis-ci
   gulpfile.js             --> list of all gulp tasks
 ```
@@ -150,8 +137,7 @@ gulp help
 [project-npm-dependencies-url]: https://david-dm.org/hwndept/node-seed
 [project-npm-dev-dependencies]: https://david-dm.org/hwndept/node-seed/dev-status.svg
 [project-npm-dev-dependencies-url]: https://david-dm.org/hwndept/node-seed#info=devDependencies&view=table
-[jshint-url]: http://jshint.com/
-[jscs-url]: http://jscs.info/
+[eslint-url]: http://eslint.org
 [mocha-url]: http://mochajs.org/
 [istanbul-url]: https://github.com/gotwarlost/istanbul/
 [gulp-url]: http://gulpjs.com/
