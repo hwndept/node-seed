@@ -1,8 +1,5 @@
-'use strict';
-
 var gulp = require('gulp-help')(require('gulp'));
-var jshint = require('gulp-jshint');
-var jscs = require('gulp-jscs');
+var eslint = require('gulp-eslint');
 var mocha = require('gulp-mocha');
 var istanbul = require('gulp-istanbul');
 var jsdoc = require('gulp-jsdoc3');
@@ -19,17 +16,11 @@ var COVERAGE_REPORT_DIR = 'build/coverage';
 var COMPILED_SRC_DIR = 'build/source';
 var JSDOC_DIR = 'build/jsdoc';
 
-gulp.task('jshint', 'Validates code with "jshint"', function (done) {
+gulp.task('lint', 'Validates code with "eslint"', function (done) {
   gulp.src(GULP_FILE.concat(SRC_FILES, TEST_FILES))
-    .pipe(jshint())
-    .pipe(jshint.reporter('default'))
-    .pipe(jshint.reporter('fail'))
-    .on('finish', done);
-});
-
-gulp.task('jscs', 'Validates code style with "jscs"', function (done) {
-  gulp.src(GULP_FILE.concat(SRC_FILES, TEST_FILES))
-    .pipe(jscs())
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError())
     .on('finish', done);
 });
 
@@ -73,11 +64,11 @@ gulp.task('jsdoc', 'Generates jsdoc', ['compile'], function (done) {
 });
 
 gulp.task('build', 'Builds source code: validates it and provides an artifacts', function (done) {
-  sequence('jshint', 'jscs', 'test', 'compile', 'jsdoc', done);
+  sequence('lint', 'test', 'compile', 'jsdoc', done);
 });
 
-gulp.task('pre-commit', 'Be run automatically on a git pre-commit hook', ['build']);
+gulp.task('pre-commit', 'Being run automatically on a git pre-commit hook', ['build']);
 
-gulp.task('ci', 'Be run on a CI', ['build']);
+gulp.task('ci', 'Being run on a CI', ['build']);
 
 gulp.task('default', ['build']);

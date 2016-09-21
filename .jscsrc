@@ -1,6 +1,0 @@
-{
-  "preset": "crockford",
-  "validateIndentation": 2,
-  "disallowMultipleVarDecl": true,
-  "requireMultipleVarDecl": null
-}
