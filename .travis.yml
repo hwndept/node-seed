@@ -3,4 +3,5 @@ node_js:  stable
 install:  npm install
 script:   ./node_modules/.bin/gulp ci
 after_script:
+  - npm install codeclimate-test-reporter
   - codeclimate-test-reporter < ./build/coverage/lcov.info
