@@ -1,0 +1,33 @@
+---
+engines:
+  duplication:
+    enabled: true
+    config:
+      languages:
+      - javascript
+  markdownlint:
+    enabled: true
+  eslint:
+    enabled: true
+    config:
+      config: .eslintrc.yml
+      extensions:
+      - .es6
+      - .js
+      - .jsx
+  nodesecurity:
+    enabled: true
+  fixme:
+    enabled: true
+    config:
+      strings:
+      - FIXME
+      - TODO
+      - XXX
+      - HACK
+ratings:
+  paths:
+  - "**.js"
+  - "**.md"
+  - "**.es6"
+  - "**.jsx"
