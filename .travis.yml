@@ -1,6 +1,5 @@
 language: node_js
 node_js:  stable
-install:  npm install
 script:   ./node_modules/.bin/gulp ci
 after_script:
   - npm install codeclimate-test-reporter
