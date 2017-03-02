@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Debug Mocha Test",
+      "type": "node",
+      "address": "localhost",
+      "port": 5858,
+      "sourceMaps": false
+    }
+  ]
+}
