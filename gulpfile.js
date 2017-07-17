@@ -1,20 +1,24 @@
-var gulp = require('gulp-help')(require('gulp'));
-var eslint = require('gulp-eslint');
-var mocha = require('gulp-mocha');
-var istanbul = require('gulp-istanbul');
-var jsdoc = require('gulp-jsdoc3');
-var sequence = require('run-sequence');
-var babel = require('gulp-babel');
-var isparta = require('isparta');
-var babelRegister = require('babel/register');
+const babel = require('gulp-babel');
+const babelRegister = require('babel/register');
+const eslint = require('gulp-eslint');
+const gulp = require('gulp-help')(require('gulp'));
+const isparta = require('isparta');
+const istanbul = require('gulp-istanbul');
+const jsdoc = require('gulp-jsdoc3');
+const mergeStream = require('merge-stream');
+const mocha = require('gulp-mocha');
+const sequence = require('run-sequence');
 
-var GULP_FILE = ['gulpfile.js'];
-var SRC_FILES = ['src/**/*.js'];
-var TEST_FILES = ['test/**/*.js'];
-var TEST_CASE_FILES = ['test/**/*.test.js'];
-var COVERAGE_REPORT_DIR = '.build/coverage';
-var COMPILED_SRC_DIR = '.build/source';
-var JSDOC_DIR = '.build/jsdoc';
+const CONFIG_FILES = ['config/*.*'];
+const GULP_FILE = ['gulpfile.js'];
+const SRC_FILES = ['src/**/*.js'];
+const TEST_FILES = ['test/**/*.js'];
+const TEST_CASE_FILES = ['test/**/*.test.js'];
+const BUILD_DIR = '.build';
+const BUILD_COVERAGE_REPORT_DIR = `${BUILD_DIR}/coverage`;
+const BUILD_SRC_DIR = `${BUILD_DIR}/source/src`;
+const BUILD_JSDOC_DIR = `${BUILD_DIR}/jsdoc`;
+const BUILD_CONFIG_DIR = `${BUILD_DIR}/source/config`;
 
 gulp.task('lint', 'Validates code with "eslint"', function (done) {
   gulp.src(GULP_FILE.concat(SRC_FILES, TEST_FILES))
@@ -35,7 +39,7 @@ gulp.task('test', 'Runs tests and generates code coverage report', function (don
       gulp.src(TEST_CASE_FILES)
         .pipe(mocha({compilers: {js: babelRegister}}))
         .pipe(istanbul.writeReports({
-          dir: COVERAGE_REPORT_DIR
+          dir: BUILD_COVERAGE_REPORT_DIR
         }))
         .pipe(istanbul.enforceThresholds({
           thresholds: {
@@ -47,16 +51,26 @@ gulp.task('test', 'Runs tests and generates code coverage report', function (don
 });
 
 gulp.task('compile', 'Compiles source code from es6 to es5', function (done) {
-  gulp.src(SRC_FILES)
-    .pipe(babel())
-    .pipe(gulp.dest(COMPILED_SRC_DIR))
-    .on('finish', done);
+  const stream = mergeStream();
+
+  stream.add(
+    gulp.src(SRC_FILES)
+      .pipe(babel({ presets: ['es2015'] }))
+      .pipe(gulp.dest(BUILD_SRC_DIR))
+  );
+
+  stream.add(
+    gulp.src(CONFIG_FILES)
+      .pipe(gulp.dest(BUILD_CONFIG_DIR))
+  );
+
+  stream.on('finish', done);
 });
 
 gulp.task('jsdoc', 'Generates jsdoc', function (done) {
   gulp.src(SRC_FILES, {read: false})
     .pipe(jsdoc({
-      opts: {destination: JSDOC_DIR},
+      opts: {destination: BUILD_JSDOC_DIR},
       templates: {
         theme: 'cerulean'
       }
