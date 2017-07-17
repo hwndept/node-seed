@@ -64,7 +64,7 @@ gulp test
 
 Test cases stored in files **test/\*\*/\*.test.js** will be run only
 
-Coverage reports will be generated and stored in folder **build/coverage**
+Coverage reports will be generated and stored in folder **.build/coverage**
 
 ## Generating jsdoc
 
@@ -72,7 +72,7 @@ Coverage reports will be generated and stored in folder **build/coverage**
 gulp jsdoc
 ```
 
-Documentation will be generated for **\*.js** files from **src** folder and stored in folder **build/jsdoc**
+Documentation will be generated for **\*.js** files from **src** folder and stored in folder **.build/jsdoc**
 
 ## Compiling code - ES6 Support
 
@@ -82,7 +82,7 @@ Since **nodejs** doesn't fully support all ES6 features source code should be co
 gulp compile
 ```
 
-Source code in **src** folder will be compiled and stored in folder **build/source**
+Source code in **src** folder will be compiled and stored in folder **.build/source**
 
 ## Running all tasks
 
@@ -107,18 +107,25 @@ gulp help
 ## Directory Layout
 
 ```
-  build/                  --> build results
+  .build/                  --> build results
     coverage              --> code coverage reports
     jsdoc                 --> documentation generated for source code
+    source                --> copy of the project but with transpiled code
+  config/
+    confih.yml            --> application configuration file
   src/                    --> source files for the application
+    services/
+      config.js           --> configuration module
     hello.js              --> added just for an example
   test/                   --> test files for the application
+    integration/          --> integration tests
+    unit/                 --> unit tests
     .eslintrc             --> configuration file for eslint; these rules
                               will be applied for files in this folder
                               only; created because test cases contain
                               global functions which exports by
                               mocha(describe, it, beforeEach, etc)
-    hello.test.js         --> added just for an example
+  .codeclimate.yml        --> configuration file for codeclimate
   .editorconfig           --> configuration file for code editors to keep style
   .eslintrc               --> configuration file for eslint
   .travis.yml             --> configuration file for travis-ci

@@ -1,5 +1,5 @@
+.build/
+.codio/
+.idea/
+.vcode/
 node_modules/
-build/
-.codio
-.idea
-.vscode
