@@ -12,9 +12,9 @@ var GULP_FILE = ['gulpfile.js'];
 var SRC_FILES = ['src/**/*.js'];
 var TEST_FILES = ['test/**/*.js'];
 var TEST_CASE_FILES = ['test/**/*.test.js'];
-var COVERAGE_REPORT_DIR = 'build/coverage';
-var COMPILED_SRC_DIR = 'build/source';
-var JSDOC_DIR = 'build/jsdoc';
+var COVERAGE_REPORT_DIR = '.build/coverage';
+var COMPILED_SRC_DIR = '.build/source';
+var JSDOC_DIR = '.build/jsdoc';
 
 gulp.task('lint', 'Validates code with "eslint"', function (done) {
   gulp.src(GULP_FILE.concat(SRC_FILES, TEST_FILES))
@@ -53,7 +53,7 @@ gulp.task('compile', 'Compiles source code from es6 to es5', function (done) {
     .on('finish', done);
 });
 
-gulp.task('jsdoc', 'Generates jsdoc', ['compile'], function (done) {
+gulp.task('jsdoc', 'Generates jsdoc', function (done) {
   gulp.src(SRC_FILES, {read: false})
     .pipe(jsdoc({
       opts: {destination: JSDOC_DIR},
