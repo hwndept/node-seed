@@ -1,36 +1,43 @@
 env:
+  es6: true
   node: true
 parserOptions:
   ecmaVersion: 6
   sourceType: module
 rules:
-  no-bitwise: error
+  arrow-parens:
+    - error
+    - always
   eqeqeq: error
   guard-for-in: error
+  indent:
+    - 2
+    - 2
+    - SwitchCase: 1
+  no-caller: error
   no-extend-native: error
+  no-irregular-whitespace: error
+  no-new: error
+  no-sequences: error
+  no-undef: error
+  no-unused-vars: error
   no-use-before-define:
     - error
     - functions: false
-  no-caller: error
-  no-sequences: error
-  no-irregular-whitespace: error
-  no-new: error
+  no-var: error
+  one-var:
+    - error
+    - never
   require-jsdoc:
     - error
     - require:
         FunctionDeclaration: true
         MethodDefinition: true
         ClassDeclaration: true
+  semi:
+    - error
+    - always
   strict:
     - error
     - function
-  no-undef: error
-  no-unused-vars: error
-  indent:
-    - 2
-    - 2
-    - SwitchCase: 1
-  one-var:
-    - 2
-    - never
   valid-jsdoc: error
