@@ -4,17 +4,17 @@ parserOptions:
   ecmaVersion: 6
   sourceType: module
 rules:
-  no-bitwise: 2
-  eqeqeq: 2
-  guard-for-in: 2
-  no-extend-native: 2
+  no-bitwise: error
+  eqeqeq: error
+  guard-for-in: error
+  no-extend-native: error
   no-use-before-define:
-    - 2
+    - error
     - functions: false
-  no-caller: 2
-  no-sequences: 2
-  no-irregular-whitespace: 2
-  no-new: 2
+  no-caller: error
+  no-sequences: error
+  no-irregular-whitespace: error
+  no-new: error
   require-jsdoc:
     - error
     - require:
@@ -22,10 +22,10 @@ rules:
         MethodDefinition: true
         ClassDeclaration: true
   strict:
-    - 2
+    - error
     - function
-  no-undef: 2
-  no-unused-vars: 2
+  no-undef: error
+  no-unused-vars: error
   indent:
     - 2
     - 2
