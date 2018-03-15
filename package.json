@@ -33,22 +33,22 @@
   },
   "homepage": "https://github.com/hwndept/node-seed",
   "devDependencies": {
-    "babel": "^5.8.21",
+    "babel": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-eslint": "^3.0.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-eslint": "^4.0.2",
     "gulp-help": "^1.6.1",
     "gulp-istanbul": "^1.0.0",
-    "gulp-jsdoc3": "^0.3.0",
-    "gulp-mocha": "^2.2.0",
-    "isparta": "^3.0.3",
+    "gulp-jsdoc3": "^1.0.1",
+    "gulp-mocha": "^5.0.0",
+    "isparta": "^4.0.0",
     "merge-stream": "^1.0.1",
     "pre-commit": "^1.1.3",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^2.2.1"
   },
   "dependencies": {
-    "nconf": "^0.8.4",
+    "nconf": "^0.10.0",
     "nconf-yaml": "^1.0.2"
   }
 }
