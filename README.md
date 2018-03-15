@@ -7,6 +7,8 @@
 
 # node-seed
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/hwndept/node-seed.svg)](https://greenkeeper.io/)
+
 This project is a skeleton for a typical NodeJS application.
 
 The idea is to group useful tools and good practices for every application is being developed in node.
