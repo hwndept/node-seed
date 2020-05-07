@@ -30,8 +30,8 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: code-coverage
-        path: ./build/coverage
+        path: .build/coverage
     - uses: actions/upload-artifact@v2
       with:
         name: jsdoc
-        path: ./build/jsdoc
+        path: .build/jsdoc
