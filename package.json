@@ -3,21 +3,16 @@
   "version": "0.0.14",
   "description": "A skeleton for a typical NodeJS application",
   "keywords": [
-    "node project",
-    "nodejs project",
-    "node seed",
-    "eslint",
-    "mocha",
-    "istanbul",
-    "code coverage",
-    "gulp",
-    "pre-commit",
-    "es6",
-    "babel"
+    "node seed"
   ],
   "main": "",
   "scripts": {
-    "pre-commit": "./node_modules/.bin/gulp pre-commit"
+    "pre-commit": "npm test",
+    "lint": "eslint --fix -c .eslintrc.yaml .",
+    "jsdoc": "jsdoc -d .build/jsdoc -r src",
+    "prejsdoc": "rimraf .build/jsdoc",
+    "test": "npm run lint && npm run tests && npm run jsdoc",
+    "tests": "jest"
   },
   "pre-commit": [
     "pre-commit"
@@ -33,22 +28,14 @@
   },
   "homepage": "https://github.com/hwndept/node-seed",
   "devDependencies": {
-    "babel": "^5.8.21",
-    "babel-preset-es2015": "^6.24.1",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-eslint": "^3.0.1",
-    "gulp-help": "^1.6.1",
-    "gulp-istanbul": "^1.0.0",
-    "gulp-jsdoc3": "^0.3.0",
-    "gulp-mocha": "^2.2.0",
-    "isparta": "^3.0.3",
-    "merge-stream": "^1.0.1",
-    "pre-commit": "^1.1.3",
-    "run-sequence": "^1.2.2"
+    "eslint": "^6.8.0",
+    "jest": "^26.0.1",
+    "jsdoc": "^3.6.4",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^3.0.2"
   },
   "dependencies": {
-    "nconf": "^0.8.4",
+    "nconf": "^0.10.0",
     "nconf-yaml": "^1.0.2"
   }
 }

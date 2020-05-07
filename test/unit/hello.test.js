@@ -1,5 +1,5 @@
-import assert from 'assert';
-import hello from '../../src/hello';
+const assert = require('assert');
+const hello = require('../../src/hello');
 
 describe('hello.js', () => {
   it('it should return "Hello, world!" when name is empty', () => {

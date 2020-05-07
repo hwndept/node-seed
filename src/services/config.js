@@ -11,11 +11,11 @@
  * @module src/services/config
  */
 
-import nconf from 'nconf';
-import path from 'path';
-import nconfYaml from 'nconf-yaml';
+const nconf = require('nconf');
+const path = require('path');
+const nconfYaml = require('nconf-yaml');
 
-const DEFAULT_CONFIG_FILE = path.resolve(__dirname, '../../config/config.yml');
+const DEFAULT_CONFIG_FILE = path.resolve(__dirname, '../../config/config.yaml');
 
 const config = nconf
   .argv()
@@ -29,6 +29,6 @@ const config = nconf
  * 
  * @return {*} Value strored by given path
  */
-export function get(keyPath) {
+exports.get = (keyPath) => {
   return config.get(keyPath);
 };
