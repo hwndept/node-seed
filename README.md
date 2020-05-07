@@ -82,6 +82,9 @@ This hook is invoked by **git commit**, and can be bypassed with **--no-verify**
   .build/                  --> build results
     coverage              --> code coverage reports
     jsdoc                 --> documentation generated for source code
+  .github/
+    workflows/
+      nodejs.yml          --> The flows that runs automatic checks
   config/
     confih.yaml           --> application configuration file
   src/                    --> source files for the application
