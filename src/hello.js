@@ -2,7 +2,7 @@
  * @module src/hello
  */
 
-import util from 'util';
+const util = require('util');
 
 /**
  * Gets greeting message in format "Hello, %s"
@@ -13,12 +13,12 @@ import util from 'util';
  *
  * @example
  *
- *  import hello from 'src/hello';
+ *  const hello = require('src/hello');
  *
  *  hello('username'); // 'Hello, username'
  */
-export default function hello(name) {
+module.exports = (name) => {
   name = name || 'world';
 
   return util.format('Hello, %s!', name);
-}
+};
