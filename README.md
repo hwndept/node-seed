@@ -1,4 +1,3 @@
-[![build][project-travis-ci-image]][project-travis-ci-url]
 [![npm dependencies][project-npm-dependencies]][project-npm-dependencies-url]
 [![npm dev dependencies][project-npm-dev-dependencies]][project-npm-dev-dependencies-url]
 
@@ -34,7 +33,7 @@ The idea is to group useful tools and good practices for every application is be
 - Test coverage checker - [jest][jest-url];
 - Pre-commit hook;
 - JsDoc generation - [jsdoc][jsdoc-url];
-- TravisCI integration [travis-ci][travis-ci-url];
+- GitHub actions as CI;
 - Editor Config [editorconfig][editor-config-url];
 
 ## Linting
@@ -83,6 +82,9 @@ This hook is invoked by **git commit**, and can be bypassed with **--no-verify**
   .build/                  --> build results
     coverage              --> code coverage reports
     jsdoc                 --> documentation generated for source code
+  .github/
+    workflows/
+      nodejs.yml          --> The flows that runs automatic checks
   config/
     confih.yaml           --> application configuration file
   src/                    --> source files for the application
@@ -99,18 +101,13 @@ This hook is invoked by **git commit**, and can be bypassed with **--no-verify**
                               mocha(describe, it, beforeEach, etc)
   .editorconfig           --> configuration file for code editors to keep style
   .eslintrc.yaml          --> configuration file for eslint
-  .travis.yml             --> configuration file for travis-ci
 ```
 
-[project-travis-ci-image]: https://travis-ci.org/hwndept/node-seed.svg?branch=master
-[project-travis-ci-url]: https://travis-ci.org/hwndept/node-seed
 [project-npm-dependencies]: https://david-dm.org/hwndept/node-seed/status.svg
 [project-npm-dependencies-url]: https://david-dm.org/hwndept/node-seed
 [project-npm-dev-dependencies]: https://david-dm.org/hwndept/node-seed/dev-status.svg
 [project-npm-dev-dependencies-url]: https://david-dm.org/hwndept/node-seed#info=devDependencies&view=table
 [eslint-url]: http://eslint.org
 [jest-url]: https://jestjs.io/
-[istanbul-url]: https://github.com/gotwarlost/istanbul/
 [jsdoc-url]: http://usejsdoc.org/
-[travis-ci-url]: https://travis-ci.org/
 [editor-config-url]: http://editorconfig.org/
