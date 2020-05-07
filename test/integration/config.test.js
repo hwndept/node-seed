@@ -1,5 +1,5 @@
-import assert from 'assert';
-import {get} from '../../src/services/config';
+const assert = require('assert');
+const {get} = require('../../src/services/config');
 
 describe('config.js', () => {
   it('should be possible to retrieve value', () => {
